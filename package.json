@@ -4,6 +4,7 @@
   "description": "## Description Ini adalah kunci jawaban untuk pertanyaan tugas ExpressJs:Tugas_6",
   "main": "index.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
