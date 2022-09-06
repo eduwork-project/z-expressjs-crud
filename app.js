@@ -9,20 +9,29 @@ app.get("/", (req, res) => {
 })
 
 // endpoint for data member
+// findall
 app.get("/dataMember", (req, res) => {
-  
+  const list = [];
+  res.send(list);
 })
+// create
 app.post("/dataMember", (req, res) => {
-  
+  res.sendStatus(200);
 })
+// find one
 app.get("/dataMember/:id", (req, res) => {
-  
+  const id = req.params.id;
+  res.send(id);
 })
+// update one
 app.patch("/dataMember/:id", (req, res) => {
-  
+  const id = req.params.id;
+  res.send(id);
 })
+// delete one
 app.delete("/dataMember/:id", (req, res) => {
-  
+  const id = req.params.id;
+  res.send(id);
 })
 
 app.listen(3000, () => {
