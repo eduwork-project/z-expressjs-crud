@@ -1,0 +1,24 @@
+{
+  "name": "z-expressjs-crud",
+  "version": "1.0.0",
+  "description": "## Description Ini adalah kunci jawaban untuk pertanyaan tugas ExpressJs:Tugas_6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduwork-project/z-expressjs-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduwork-project/z-expressjs-crud/issues"
+  },
+  "homepage": "https://github.com/eduwork-project/z-expressjs-crud#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
