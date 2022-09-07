@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const { mongoURL, db } = require('./config');
 const errorHandler = require('./middlewares/errorHandler');
+const router = require('./routes');
 
 const app = express();
 
@@ -25,32 +26,7 @@ app.get("/", (req, res) => {
   res.sendStatus(200);
 })
 
-// endpoint for data member
-// findall
-app.get("/dataMember", (req, res) => {
-  const list = [];
-  res.send(list);
-})
-// create
-app.post("/dataMember", (req, res) => {
-  res.sendStatus(200);
-})
-// find one
-app.get("/dataMember/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(id);
-})
-// update one
-app.patch("/dataMember/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(id);
-})
-// delete one
-app.delete("/dataMember/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(id);
-})
-
+app.use('/', router);
 app.use(errorHandler);
 
 app.listen(3000, () => {
