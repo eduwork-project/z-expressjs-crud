@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const { mongoURL, db } = require('./config');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
@@ -49,6 +50,8 @@ app.delete("/dataMember/:id", (req, res) => {
   const id = req.params.id;
   res.send(id);
 })
+
+app.use(errorHandler);
 
 app.listen(3000, () => {
   console.log("running on port 3000...");
